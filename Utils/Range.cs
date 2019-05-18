@@ -10,9 +10,7 @@ public class Range {
 	public float max;
 
 	public float size {
-		get {
-			return max - min;
-		}
+		get => max - min;
 	}
 
 	public Range(float min, float max) {
