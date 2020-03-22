@@ -42,6 +42,10 @@ public class Range {
 		return Lerp(UnityEngine.Random.value);
 	}
 
+	public float Clamp(float x) {
+		return Mathf.Clamp(x, min, max);
+	}
+
 	public float Wrap(float x) {
 		x -= min;
 
