@@ -65,10 +65,19 @@ public static class RectExtensions  {
 	public static Vector3 Point(this Rect r, float x, float y)
 	{
 		Vector3 v = Vector3.zero;
-		v.x = Mathf.Lerp(r.xMin, r.xMax, x);
-		v.y = Mathf.Lerp(r.yMin, r.yMax, y);
+		v.x = (1-x) * r.xMin + x * r.xMax;
+		v.y = (1-y) * r.yMin + y * r.yMax;
 
 		return v;
+	}
+
+	/**
+	 * Pick a point inside the rect
+	 */
+
+	public static Vector3 Point(this Rect r, Vector2 p)
+	{
+		return r.Point(p.x, p.y);;
 	}
 
 
