@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 /**
  * Extension methods for the Rect class
@@ -64,10 +65,19 @@ public static class RectExtensions  {
 	public static Vector3 Point(this Rect r, float x, float y)
 	{
 		Vector3 v = Vector3.zero;
-		v.x = Mathf.Lerp(r.xMin, r.xMax, x);
-		v.y = Mathf.Lerp(r.yMin, r.yMax, y);
+		v.x = (1-x) * r.xMin + x * r.xMax;
+		v.y = (1-y) * r.yMin + y * r.yMax;
 
 		return v;
+	}
+
+	/**
+	 * Pick a point inside the rect
+	 */
+
+	public static Vector3 Point(this Rect r, Vector2 p)
+	{
+		return r.Point(p.x, p.y);;
 	}
 
 
@@ -95,6 +105,27 @@ public static class RectExtensions  {
 		return r;
 	}
 
+	public static void DrawGizmo(this Rect r) {
+		for (int i = 0; i < 4; i++) {
+			Gizmos.DrawLine(r.Corner(i), r.Corner(i+1));
+		}
+	}
+
+	public static void DrawGizmo(this Rect r, Transform t) {
+		for (int i = 0; i < 4; i++) {
+			Gizmos.DrawLine(t.TransformPoint(r.Corner(i)), t.TransformPoint(r.Corner(i+1)));
+		}
+	}
+
+	public static void DrawGizmoFilled(this Rect r, Transform t, Color faceColor, Color outlineColor) {
+		Vector3[] verts = new Vector3[4];
+		verts[0] = t.TransformPoint(r.Corner(0));
+		verts[1] = t.TransformPoint(r.Corner(1));
+		verts[2] = t.TransformPoint(r.Corner(2));
+		verts[3] = t.TransformPoint(r.Corner(3));
+
+		Handles.DrawSolidRectangleWithOutline(verts, faceColor, outlineColor);
+	}
 
 }
 }

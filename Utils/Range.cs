@@ -10,9 +10,7 @@ public class Range {
 	public float max;
 
 	public float size {
-		get {
-			return max - min;
-		}
+		get => max - min;
 	}
 
 	public Range(float min, float max) {
@@ -42,6 +40,10 @@ public class Range {
 
 	public float Random() {
 		return Lerp(UnityEngine.Random.value);
+	}
+
+	public float Clamp(float x) {
+		return Mathf.Clamp(x, min, max);
 	}
 
 	public float Wrap(float x) {
