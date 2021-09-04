@@ -95,6 +95,22 @@ public static class RectExtensions  {
 		return r;
 	}
 
+	public static void DrawGizmo(this Rect r, Transform localTransform = null)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			Vector3 p0 = r.Corner(i);
+			Vector3 p1 = r.Corner(i+1);
+
+			if (localTransform != null)
+			{
+				p0 = localTransform.TransformPoint(p0);
+				p1 = localTransform.TransformPoint(p1);
+			}
+
+			Gizmos.DrawLine(p0, p1);
+		}
+	}
 
 }
 }
