@@ -57,9 +57,10 @@ public class GraphGizmo : MonoBehaviour
 
         while (vIt.MoveNext() && tIt.MoveNext())
         {
-            Vector3 p1 = new Vector3();
-            p1.x = tIt.Current / duration;
-            p1.y = vIt.Current / range;
+            float x = 1 - (Time.time - tIt.Current) / duration;
+            float y = vIt.Current / range;
+
+            Vector3 p1 = rect.Point(x,y);
 
             if (first)
             {
