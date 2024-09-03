@@ -1,0 +1,62 @@
+/**
+ *
+ *
+ * Author: 
+ * Version: 1.0
+ * For Unity Version: 2022.3
+ */
+
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+
+#region Parameters
+#endregion 
+
+#region Components
+#endregion
+
+#region State
+#endregion
+
+#region Properties
+#endregion
+
+#region Actions
+#endregion
+
+#region Events
+#endregion
+
+#region Init & Destroy
+    void Awake()
+    {
+    }
+#endregion Init
+
+#region Update
+    void Update()
+    {
+    }
+#endregion Update
+
+#region FixedUpdate
+    void FixedUpdate()
+    {        
+    }
+#endregion FixedUpdate
+
+#region Gizmos
+    void OnDrawGizmos()
+    {
+        if (!Application.isPlaying)
+        {
+            // Don't run in the editor
+            return;
+        }
+    }
+#endregion Gizmos
+}
+#ROOTNAMESPACEEND#
