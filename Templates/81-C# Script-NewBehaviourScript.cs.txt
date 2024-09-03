@@ -1,5 +1,21 @@
 /**
+ * Custom Monobehaviour Script template
  *
+ * A custom template for structuring your Unity Monobehaviour code.
+ *
+ * Windows:
+ * - Go to C:\Program Files\Unity 2022.3.36f1\Editor\Data\Resources\ScriptTemplates
+ * - Save as: 81-C# Script-NewBehaviourScript.cs.txt
+ *
+ * Mac: 
+ * - Go to /Applications/Unity/2022.3.36f1/ (or whatever version you are using)
+ * - Right click on Unity.app
+ * - Select "Show Package Contents"
+ * - Go to Contents/Resources/ScriptTemplates/
+ * - Save as: 81-C# Script-NewBehaviourScript.cs.txt
+ *
+ * See also:
+ * https://support.unity.com/hc/en-us/articles/210223733-How-to-customize-Unity-script-templates
  *
  * Author: 
  * Version: 1.0
