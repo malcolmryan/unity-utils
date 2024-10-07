@@ -117,7 +117,10 @@ public static class RectExtensions  {
 		}
 	}
 
-	public static void DrawGizmoFilled(this Rect r, Transform t, Color faceColor, Color outlineColor) {
+	public static void DrawGizmoFilled(
+		this Rect r, Transform t, Color faceColor, Color outlineColor) {
+
+#if UNITY_EDITOR
 		Vector3[] verts = new Vector3[4];
 		verts[0] = t.TransformPoint(r.Corner(0));
 		verts[1] = t.TransformPoint(r.Corner(1));
@@ -125,6 +128,7 @@ public static class RectExtensions  {
 		verts[3] = t.TransformPoint(r.Corner(3));
 
 		Handles.DrawSolidRectangleWithOutline(verts, faceColor, outlineColor);
+#endif
 	}
 
 }
