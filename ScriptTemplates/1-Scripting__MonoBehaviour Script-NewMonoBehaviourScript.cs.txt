@@ -2,7 +2,7 @@
  * 
  * Author: Malcolm Ryan
  * Version: 1.0
- * For Unity Version: 6000.0.40f1
+ * For Unity Version: 6000.0.53f1
  */
 
 using UnityEngine;
@@ -14,6 +14,9 @@ public class #SCRIPTNAME# : MonoBehaviour
 #region Parameters
 #endregion 
 
+#region Connected Objects
+#endregion
+
 #region Components
 #endregion
 
@@ -21,9 +24,6 @@ public class #SCRIPTNAME# : MonoBehaviour
 #endregion
 
 #region Properties
-#endregion
-
-#region Actions
 #endregion
 
 #region Events
