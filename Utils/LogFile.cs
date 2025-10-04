@@ -9,15 +9,15 @@ public class LogFile : MonoBehaviour {
 	// find the path to the log folder (this should work cross platform)
 	private string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Logs");
 
-	public string name;
+	[SerializeField] private string fileName;
 
 	// the format for the filename. 
 	// The {0} is filled with the path above
 	// the {1:yyyy-MM-dd-HH-mm-ss} is filled with the current data/time in a sortable format.
-	public string nameFormat = "{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt";
+	[SerializeField] private string nameFormat = "{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt";
 
 	// an array of headers describing the contents of a row of the log (one per column)
-	public string[] headers = {};
+	[SerializeField] private string[] headers = {};
 
 	private string lineFormat;
 
@@ -33,7 +33,7 @@ public class LogFile : MonoBehaviour {
 		}
 
 		// create the filename from the current time
-		string filename = string.Format(nameFormat, path, name, System.DateTime.Now);
+		string filename = string.Format(nameFormat, path, fileName, System.DateTime.Now);
 
 		// open the stream
 		log = new StreamWriter (filename);
