@@ -1,0 +1,61 @@
+/**
+ * 
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6000.0.40f1
+ */
+
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+
+#region Parameters
+#endregion 
+
+#region Components
+#endregion
+
+#region State
+#endregion
+
+#region Properties
+#endregion
+
+#region Actions
+#endregion
+
+#region Events
+#endregion
+
+#region Init & Destroy
+    void Awake()
+    {
+    }
+#endregion 
+
+#region Update
+    void Update()
+    {
+    }
+#endregion
+
+#region FixedUpdate
+    void FixedUpdate()
+    {        
+    }
+#endregion
+
+#region Gizmos
+    void OnDrawGizmos()
+    {
+        if (!Application.isPlaying)
+        {
+            // Don't run in the editor
+            return;
+        }
+    }
+#endregion
+}
+#ROOTNAMESPACEEND#
