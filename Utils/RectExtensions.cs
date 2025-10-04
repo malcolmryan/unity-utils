@@ -9,7 +9,6 @@ using UnityEditor;
 namespace WordsOnPlay.Utils {
 public static class RectExtensions  {
 
-
 	/**
 	 * Get corners of the rect in clockwise order
 	 */
@@ -17,7 +16,7 @@ public static class RectExtensions  {
 	public static Vector2 Corner(this Rect r, int i) {
 		Vector2 p = Vector2.zero;
 
-		switch ((i % 4) + 4 % 4) {
+		switch (((i % 4) + 4) % 4) {
 		case 0:
 			p = r.min;
 			break;
@@ -31,7 +30,6 @@ public static class RectExtensions  {
 			p = new Vector3(r.xMax, r.yMin);
 			break;
 		}
-
 
 		return p;
 	}
