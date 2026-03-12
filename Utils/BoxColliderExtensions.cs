@@ -19,10 +19,10 @@ public static class BoxColliderExtensions  {
 	 */
 
 	public static Collider[] Occupied(this BoxCollider collider, Transform transform, LayerMask layerMask) {
-            Vector3 centre = transform.TransformPoint(collider.center);
-            Vector3 size = Vector3.Scale(collider.size, transform.lossyScale);
-            Collider[] hit = Physics.OverlapBox(centre, size / 2, transform.rotation, layerMask);
-            return hit; 
+		Vector3 centre = transform.TransformPoint(collider.center);
+		Vector3 size = Vector3.Scale(collider.size, transform.lossyScale);
+		Collider[] hit = Physics.OverlapBox(centre, size / 2, transform.rotation, layerMask);
+		return hit; 
 	}
 
 	/**
@@ -30,10 +30,16 @@ public static class BoxColliderExtensions  {
 	 */
 
 	public static bool IsOccupied(this BoxCollider collider, Transform transform, LayerMask layerMask) {
-            Vector3 centre = transform.TransformPoint(collider.center);
-            Vector3 size = Vector3.Scale(collider.size, transform.lossyScale);
-            Collider[] hit = Physics.OverlapBox(centre, size / 2, transform.rotation, layerMask);
-            return hit.Length > 0; 
+		Vector3 centre = transform.TransformPoint(collider.center);
+		Vector3 size = Vector3.Scale(collider.size, transform.lossyScale);
+		Collider[] hit = Physics.OverlapBox(centre, size / 2, transform.rotation, layerMask);
+		return hit.Length > 0; 
+	}
+
+	public static bool IsOccupied(this BoxCollider collider, Transform transform) {
+		// use the Physics Collision Matrix
+		LayerMask layerMask = LayerMaskExtensions.CollisionLayerMask(collider.gameObject);
+		return collider.IsOccupied(transform, layerMask);
 	}
 
 

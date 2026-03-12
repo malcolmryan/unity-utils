@@ -52,5 +52,25 @@ public static class InlineCR {
         yield return action;
     }
 
+    /// <summary>
+    /// Simple wrapper for inlining an action as a coroutine.
+    /// The action is executed after a delay
+    /// 
+    /// E.g.
+    /// 
+    /// StartCoroutine(InlineCR.After(10, () => { Debug.Log("This is a coroutine.")}));
+    /// 
+    /// </summary>
+    /// <param name="action"></param>
+    /// <returns></returns>
+
+    public static IEnumerator After(float seconds, Action action)
+    {
+        // wait a frame
+        yield return new WaitForSeconds(seconds);
+        action();
+        yield return action;
+    }
+
 }
 }
