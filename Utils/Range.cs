@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/**
+ * Represents a range between min and max float values
+ *
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+ */
+ 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

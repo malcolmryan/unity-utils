@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿/**
+ * Extenions to the BoxCollider class
+ *
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+ */
+ 
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
-
-/**
- * Extension methods for the Rect class
- */
 
 namespace WordsOnPlay.Utils {
 public static class BoxColliderExtensions  {

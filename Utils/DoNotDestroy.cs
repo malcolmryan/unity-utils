@@ -8,6 +8,7 @@
 
 using UnityEngine;
 
+namespace WordsOnPlay.Utils {
 public class DoNotDestroy : MonoBehaviour
 {
 
@@ -18,4 +19,5 @@ public class DoNotDestroy : MonoBehaviour
     }
 #endregion Init
 
+}
 }

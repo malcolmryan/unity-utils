@@ -1,11 +1,15 @@
+/**
+ * A class for inlining simple coroutines as Actions
+ * 
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+ */
+ 
 using UnityEngine;
 using System;
 using System.Collections;
 
-/**
- * Extensions to Unity's LayerMask class
- * 
- */
 namespace WordsOnPlay.Utils {
 
 public static class InlineCR {

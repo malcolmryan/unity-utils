@@ -1,7 +1,10 @@
 /**
  * Wrapper to the System.Random class, that can be overridden with a specific 'random' feed output
  * 
- */
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+  */
 
 using UnityEngine;
 

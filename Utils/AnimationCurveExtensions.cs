@@ -1,14 +1,21 @@
-﻿using UnityEngine;
+﻿/**
+ * Extensions to the AnimationCurve class
+ *
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+ */
+ 
+ using UnityEngine;
 using System;
 using System.Collections;
 
-/**
- * Extensions to Unity's LayerMask class
- * 
- */
 namespace WordsOnPlay.Utils {
 
 public static class AnimationCurveExtensions  {
+
+    /// A coroutine that calculates the current value of the Animation curve and calls an evalCallback.
+    /// It calls the doneCallback when it reaches the end of the curver
 
 	public static IEnumerator Run(this AnimationCurve curve, Action<float> evalCallback, Action doneCallback) {
 

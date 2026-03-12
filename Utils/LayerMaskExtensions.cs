@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿/**
+ * Extensions to the LayerMask class
+ *
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
+ */
+ 
+using UnityEngine;
 using System.Collections;
 
-/**
- * Extensions to Unity's LayerMask class
- * 
- */
 namespace WordsOnPlay.Utils {
 
 public static class LayerMaskExtensions  {

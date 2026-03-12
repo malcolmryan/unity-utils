@@ -1,9 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/**
- * Extensions to the Vector3 class
+﻿/**
+ * Extension methods for the Vector3 class
+ * 
+ * Author: Malcolm Ryan
+ * Version: 1.0
+ * For Unity Version: 6.3
  */
+
+using UnityEngine;
+using System.Collections;
 
 namespace WordsOnPlay.Utils {
 
