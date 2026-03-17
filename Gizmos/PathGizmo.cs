@@ -54,17 +54,20 @@ public class PathGizmo : MonoBehaviour
 #region Gizmos
     void OnDrawGizmos()
     {
-        Gizmos.color = color;
-        Vector3? prev = null;
-
-        foreach (Vector3 p in points)
+        if (Application.isPlaying)
         {
-            Gizmos.DrawSphere(p, pointRadius); 
-            if (prev != null)
+            Gizmos.color = color;
+            Vector3? prev = null;
+
+            foreach (Vector3 p in points)
             {
-                Gizmos.DrawLine(prev.Value, p); 
-            }
-            prev = p;
+                Gizmos.DrawSphere(p, pointRadius); 
+                if (prev != null)
+                {
+                    Gizmos.DrawLine(prev.Value, p); 
+                }
+                prev = p;
+            }            
         }
     }
 #endregion
