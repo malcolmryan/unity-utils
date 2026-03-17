@@ -10,7 +10,7 @@
  * 
  * Author: Malcolm Ryan
  * Version: 1.0
- * For Unity Version: 6000.0.40f1
+ * For Unity Version: 6000.0.53f1
  */
  
 using System;

@@ -92,6 +92,13 @@ public static class RectExtensions  {
 		return r.Point(Random.value, Random.value);
 	}
 
+	public static Vector3 RandomPoint(this Rect r, System.Random rng)
+	{		
+		float x = (float)rng.NextDouble();
+		float y = (float)rng.NextDouble();
+		return r.Point(x, y);
+	}
+
 	/**
 	 * Lerp between two Rects
 	 */
